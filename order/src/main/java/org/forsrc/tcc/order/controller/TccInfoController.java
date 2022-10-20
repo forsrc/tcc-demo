@@ -1,9 +1,10 @@
 package org.forsrc.tcc.order.controller;
 
+import org.forsrc.core.controller.BaseController;
+import org.forsrc.core.service.BaseService;
 import org.forsrc.tcc.common.api.TccWebApi;
 import org.forsrc.tcc.common.exception.TccException;
 import org.forsrc.tcc.order.entity.TccInfo;
-import org.forsrc.tcc.order.service.BaseService;
 import org.forsrc.tcc.order.service.TccInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

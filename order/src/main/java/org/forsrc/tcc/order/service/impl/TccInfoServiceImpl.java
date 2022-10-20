@@ -1,6 +1,7 @@
 package org.forsrc.tcc.order.service.impl;
 
-import org.forsrc.tcc.order.dao.BaseDao;
+import org.forsrc.core.dao.BaseDao;
+import org.forsrc.core.service.impl.BaseServiceImpl;
 import org.forsrc.tcc.order.dao.TccInfoDao;
 import org.forsrc.tcc.order.entity.TccInfo;
 import org.forsrc.tcc.order.service.TccInfoService;

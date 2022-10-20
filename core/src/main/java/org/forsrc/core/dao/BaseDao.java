@@ -1,4 +1,4 @@
-package org.forsrc.tcc.user.dao;
+package org.forsrc.core.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;

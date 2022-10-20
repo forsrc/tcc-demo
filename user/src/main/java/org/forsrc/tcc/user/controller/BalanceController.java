@@ -1,8 +1,9 @@
 package org.forsrc.tcc.user.controller;
 
+import org.forsrc.core.controller.BaseController;
+import org.forsrc.core.service.BaseService;
 import org.forsrc.tcc.user.entity.Balance;
 import org.forsrc.tcc.user.service.BalanceService;
-import org.forsrc.tcc.user.service.BaseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

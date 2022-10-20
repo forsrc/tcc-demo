@@ -21,6 +21,7 @@
 
     <modules>
         <module>common</module>
+        <module>core</module>
         <module>tcc</module>
         <module>user</module>
         <module>order</module>

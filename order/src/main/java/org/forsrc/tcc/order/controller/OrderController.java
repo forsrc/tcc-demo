@@ -1,7 +1,8 @@
 package org.forsrc.tcc.order.controller;
 
+import org.forsrc.core.controller.BaseController;
+import org.forsrc.core.service.BaseService;
 import org.forsrc.tcc.order.entity.Order;
-import org.forsrc.tcc.order.service.BaseService;
 import org.forsrc.tcc.order.service.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

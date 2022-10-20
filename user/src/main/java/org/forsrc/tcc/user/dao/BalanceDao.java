@@ -1,5 +1,6 @@
 package org.forsrc.tcc.user.dao;
 
+import org.forsrc.core.dao.BaseDao;
 import org.forsrc.tcc.user.entity.Balance;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;

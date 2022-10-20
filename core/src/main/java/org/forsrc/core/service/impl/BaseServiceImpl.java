@@ -1,9 +1,9 @@
-package org.forsrc.tcc.order.service.impl;
+package org.forsrc.core.service.impl;
 
 import java.util.List;
 
-import org.forsrc.tcc.order.dao.BaseDao;
-import org.forsrc.tcc.order.service.BaseService;
+import org.forsrc.core.dao.BaseDao;
+import org.forsrc.core.service.BaseService;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -29,7 +29,7 @@ public abstract class BaseServiceImpl<E, PK> implements BaseService<E, PK> {
     @Override
     @Transactional(readOnly = true)
     public E getById(PK pk) {
-        return getDao().getReferenceById(pk);
+        return getDao().findById(pk).orElse(null);
     }
 
     @Override
@@ -51,12 +51,6 @@ public abstract class BaseServiceImpl<E, PK> implements BaseService<E, PK> {
 
     @Override
     public List<E> findAll(E e) {
-
         return getDao().findAll(Example.of(e));
-    }
-
-    @Override
-    public long count() {
-        return getDao().count();
     }
 }

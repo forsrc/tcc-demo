@@ -1,5 +1,6 @@
 package org.forsrc.tcc.user.service;
 
+import org.forsrc.core.service.BaseService;
 import org.forsrc.tcc.user.entity.Balance;
 import org.forsrc.tcc.user.entity.TccInfo;
 import org.springframework.stereotype.Service;

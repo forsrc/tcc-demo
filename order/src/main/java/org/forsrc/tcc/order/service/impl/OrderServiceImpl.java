@@ -2,7 +2,8 @@ package org.forsrc.tcc.order.service.impl;
 
 import java.util.List;
 
-import org.forsrc.tcc.order.dao.BaseDao;
+import org.forsrc.core.dao.BaseDao;
+import org.forsrc.core.service.impl.BaseServiceImpl;
 import org.forsrc.tcc.order.dao.OrderDao;
 import org.forsrc.tcc.order.entity.Order;
 import org.forsrc.tcc.order.service.OrderService;

@@ -1,4 +1,4 @@
-package org.forsrc.tcc.order.service;
+package org.forsrc.core.service;
 
 import java.util.List;
 
@@ -9,8 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional(rollbackFor = { Exception.class })
 public interface BaseService<E, PK> {
-
-    public List<E> findAll(E e);
 
     public E getById(PK pk);
 
@@ -24,6 +22,6 @@ public interface BaseService<E, PK> {
 
     public void delete(E e);
 
-    public long count();
+    public List<E> findAll(E e);
 
 }

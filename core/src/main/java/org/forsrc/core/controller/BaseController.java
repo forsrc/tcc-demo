@@ -1,10 +1,10 @@
-package org.forsrc.tcc.tcc.controller;
+package org.forsrc.core.controller;
 
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.forsrc.tcc.tcc.service.BaseService;
+import org.forsrc.core.service.BaseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -70,7 +70,7 @@ public abstract class BaseController<T extends Serializable, PK> {
         LOGGER.info("-->\tdeleteById({})", pk);
         getService().deleteById(pk);
         Map<String, Object> message = new HashMap<>(1);
-        message.put("message", "Deleted " + pk);
+        message.put("message", "Deleted " + pk.toString());
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 }

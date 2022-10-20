@@ -1,7 +1,8 @@
 package org.forsrc.tcc.tcc.controller;
 
+import org.forsrc.core.controller.BaseController;
+import org.forsrc.core.service.BaseService;
 import org.forsrc.tcc.tcc.entity.TccLink;
-import org.forsrc.tcc.tcc.service.BaseService;
 import org.forsrc.tcc.tcc.service.TccLinkService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

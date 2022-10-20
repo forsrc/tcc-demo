@@ -2,8 +2,9 @@ package org.forsrc.tcc.user.service.impl;
 
 import java.math.BigDecimal;
 
+import org.forsrc.core.dao.BaseDao;
+import org.forsrc.core.service.impl.BaseServiceImpl;
 import org.forsrc.tcc.user.dao.BalanceDao;
-import org.forsrc.tcc.user.dao.BaseDao;
 import org.forsrc.tcc.user.entity.Balance;
 import org.forsrc.tcc.user.entity.TccInfo;
 import org.forsrc.tcc.user.entity.User;

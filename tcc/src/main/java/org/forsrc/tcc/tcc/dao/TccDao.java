@@ -1,5 +1,6 @@
 package org.forsrc.tcc.tcc.dao;
 
+import org.forsrc.core.dao.BaseDao;
 import org.forsrc.tcc.tcc.entity.Tcc;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
