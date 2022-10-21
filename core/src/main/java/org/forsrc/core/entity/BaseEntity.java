@@ -1,5 +1,6 @@
 package org.forsrc.core.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 //@Table(name = "t_base", indexes = { @Index(name = "i_user_username", columnList = "username") }, uniqueConstraints = {
 //        @UniqueConstraint(name = "uk_user_username", columnNames = { "username" }) })
 //@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler", "fieldHandler" })
-public class BaseEntity implements java.io.Serializable {
+public class BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 7053075402341362549L;
 

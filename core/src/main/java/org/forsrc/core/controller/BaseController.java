@@ -19,34 +19,34 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-public abstract class BaseController<T extends Serializable, PK> {
+public abstract class BaseController<E extends Serializable, PK> {
 
-    public abstract BaseService<T, PK> getService();
+    public abstract BaseService<E, PK> getService();
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BaseController.class);
 
     @GetMapping("/{pk}")
-    public ResponseEntity<T> get(@PathVariable("pk") PK pk) {
-        T t = getService().getById(pk);
+    public ResponseEntity<E> get(@PathVariable("pk") PK pk) {
+        E t = getService().getById(pk);
         LOGGER.info("-->\tgetById({}) : {}", pk, t);
 
         return new ResponseEntity<>(t, HttpStatus.OK);
     }
 
     @GetMapping("")
-    public ResponseEntity<Page<T>> get(@RequestParam(name = "page", required = false) Integer page,
+    public ResponseEntity<Page<E>> get(@RequestParam(name = "page", required = false) Integer page,
             @RequestParam(name = "size", required = false) Integer size) {
 
         int pageValue = page == null || page == 0 ? 0 : page;
         int sizeValue = size == null || size == 0 ? 10 : size;
         sizeValue = sizeValue >= 100 ? 1 : sizeValue;
-        Page<T> list = getService().get(pageValue, sizeValue);
+        Page<E> list = getService().get(pageValue, sizeValue);
         LOGGER.info("-->\tget({}, {}) : {}", pageValue, sizeValue, list);
         return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
     @PostMapping("")
-    public ResponseEntity<T> save(@RequestBody T t) {
+    public ResponseEntity<E> save(@RequestBody E t) {
         Assert.notNull(t, "save: Object is null");
         LOGGER.info("-->\tsave({})", t);
         t = getService().save(t);
@@ -55,7 +55,7 @@ public abstract class BaseController<T extends Serializable, PK> {
     }
 
     @PutMapping("")
-    public ResponseEntity<T> update(@RequestBody T t) {
+    public ResponseEntity<E> update(@RequestBody E t) {
         Assert.notNull(t, "update: Object is null");
         // Assert.notNull(user.getUsername(), "update: username is nul");
         LOGGER.info("-->\tupdate({})", t);

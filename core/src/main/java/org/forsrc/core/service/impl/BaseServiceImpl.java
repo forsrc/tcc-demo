@@ -1,5 +1,6 @@
 package org.forsrc.core.service.impl;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.forsrc.core.dao.BaseDao;
@@ -12,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional(rollbackFor = { Exception.class })
-public abstract class BaseServiceImpl<E, PK> implements BaseService<E, PK> {
+public abstract class BaseServiceImpl<E extends Serializable, PK> implements BaseService<E, PK> {
 
     public abstract BaseDao<E, PK> getDao();
 
